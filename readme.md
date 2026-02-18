@@ -26,9 +26,11 @@ AI 기반 상담 데이터 요약 및 리포트 자동화 시스템의 **백엔�
 
 ```text
 src/main/java/com/pauly/AI_Care_Report_BE/
-├── controller/     # REST API 엔드포인트 정의
-├── service/        # 비즈니스 로직 처리 및 외부 API 연동
-├── repository/     # Spring Data JPA 기반 데이터 접근 계층
-├── entity/         # PostgreSQL 테이블과 매핑되는 도메인 모델
-└── dto/            # 프론트엔드와의 데이터 전송 객체
+├── controller/  # API 경로 정의 (@RestController)
+├── service/     # 핵심 로직 (@Service)
+├── repository/  # DB 인터페이스 (@Repository)
+├── entity/      # DB 테이블 모델 (@Entity)
+├── dto/         # 요청/응답 데이터 모델 (RequestDto, ResponseDto)
+├── common/      # 공통 예외 처리, 보안 설정 등
+└── config/      # CORS 설정, Swagger 설정 등
 ```
