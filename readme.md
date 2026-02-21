@@ -9,7 +9,8 @@ AI 기반 상담 데이터 요약 및 리포트 자동화 시스템의 **백엔�
 * **Framework**: Spring Boot 4.0.2
 * **Build Tool**: Gradle (Groovy)
 * **Database**: PostgreSQL (Supabase)
-* **ORM**: Spring Data JPA
+* **Data Access**: Spring JDBC (JDBCTemplate)
+  * 향후 개발 고도화 단계에서 Spring Data JPA로 전환 예정
 
 ## 실행 방법 및 주의사항
 
@@ -31,6 +32,5 @@ src/main/java/com/pauly/AI_Care_Report_BE/
 ├── repository/  # DB 인터페이스 (@Repository)
 ├── entity/      # DB 테이블 모델 (@Entity)
 ├── dto/         # 요청/응답 데이터 모델 (RequestDto, ResponseDto)
-├── common/      # 공통 예외 처리, 보안 설정 등
-└── config/      # CORS 설정, Swagger 설정 등
+├── mapper/      # DB 결과(ResultSet)를 객체로 변환하는 RowMapper 관리
 ```
